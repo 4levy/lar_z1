@@ -40,8 +40,8 @@ const r = new Discord.RichPresence()
           .setAssetsLargeText(`〈${currentDate}〉|〈🛸 ${Math.round(client.ws.ping)} m/s〉`) // status
           .setAssetsLargeImage(largeImages[currentLargeImageIndex]) // รูปใหญ่ไปใส่ข้างบน
           .setAssetsSmallText('୧₊˚✧・𝐁𝐮𝐬𝐲 ・꒱')
-          .addButton('୧₊˚💤・𝐈𝐭𝐳𝐥𝐞𝐯𝐲 ・꒱', 'https://guns.lol/4levy')
-          .addButton('୧₊˚💫・𝐰𝐡𝐚𝐭𝐞𝐯𝐞𝐫 ・꒱', 'https://discord.gg/aqt6thEVV7')
+          .addButton('💤・𝐈𝐭𝐳𝐥𝐞𝐯𝐲', 'https://guns.lol/4levy')
+          .addButton('💫・𝐰𝐡𝐚𝐭𝐞𝐯𝐞𝐫', 'https://discord.gg/aqt6thEVV7')
 
         client.user.setPresence({ status: "dnd" }); //dnd, online, idle, offline
         client.user.setActivity(r);
