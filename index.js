@@ -8,15 +8,15 @@ const app = express();
 const port = 8000;
 
 const largeImages = [
-    'https://media.discordapp.net/attachments/1199386824582373516/1211343738098688030/waifu-anime.gif?ex=65eddac4&is=65db65c4&hm=3c5f03263eaafb8567c0163708ed938097995a77ab220c188685341ab99b0fbf&=',
-    'https://media.discordapp.net/attachments/1199386824582373516/1211343738656399392/hikikomari-terakomari.gif?ex=65eddac4&is=65db65c4&hm=54a4cb5a3bd8a1cdba46916a0f0c44251bdc685173a7cd90b338f6a444531bb6&=',
-    'https://media.discordapp.net/attachments/1199386824582373516/1211343739323158638/hikikomari-hikikomari-kyuuketsuki.gif?ex=65eddac5&is=65db65c5&hm=af0f79d45c17475abf206a9b2c947239617364f2557abbf6a3433ee55714da8e&=',
+    'https://cdn.discordapp.com/attachments/1199386824582373516/1212463323115687988/8c16425c3c40e08c8d8f52478a7cd5b9.gif?ex=65f1ed76&is=65df7876&hm=4e5a87e3dbcb14346c0e04e7e3bbb6a2fc8897d4acc6223db12e6c1c847684a7&',
+    'https://cdn.discordapp.com/attachments/1199386824582373516/1212463497900851222/red-gang.gif?ex=65f1eda0&is=65df78a0&hm=18772bd8f33573f3271c5a66b1191bc0b19ff684cf07754efc651a2eb44cc125&',
+    'https://cdn.discordapp.com/attachments/1199386824582373516/1212463560140259328/8a3d26897edeb20670f85de1a00b799e.gif?ex=65f1edaf&is=65df78af&hm=cd22cb00b40249d7c4421583fff2d50d7b1db0fa7936c128e4aa26c3a8fcb597&',
       // ใส่เพิ่มได้ถ้าเองต้องการ รูปใหญ่
   ];
 
 let currentLargeImageIndex = 0;
 
-app.get('/', (req, res) => res.send('ทำงานเรียบร้อยแล้ว'))
+app.get('/', (req, res) => res.send('client online'))
 app.listen(port, () =>
     console.log(`Your app is listening at http://localhost:${port}`)
 );
@@ -31,20 +31,19 @@ client.on("ready", async () => {
 
 const r = new Discord.RichPresence()
           .setApplicationId('1155496899697180762')
-          .setType('WATCHING')
-          .setURL('https://youtu.be/LzAlv-wnQJY?si=NI8ZtPikq9Hb7CR_')
-          .setState('すごく疲れた | 死にたい') // คำที่ขึ้น
-          .setName('𝙵𝙰𝙺𝙴') // คำที่ขึ้น
-          .setDetails(` 〈⏰${currentTime}〉 «» 〈👻 Itz${client.user.username}〉 `) // เวลาเเละชื่อของความเท่
+          .setType('STREAMING')
+          .setURL('https://www.twitch.tv/mastersamaz')
+          .setState('𝐓𝐫𝐮𝐬𝐭 𝐢𝐬 𝐬𝐡𝐢𝐭 𝐨𝐧 𝐢𝐧𝐭𝐞𝐫𝐧𝐞𝐭') // คำที่ขึ้น
+          .setName('𝐆𝐞𝐭 𝐫𝐞𝐚𝐥') // คำที่ขึ้น
+          .setDetails(` 〈⏰ ${currentTime}〉𝓧〈🌊 Itz ${client.user.username}〉`) // เวลาเเละชื่อของความเท่
           .setStartTimestamp(startedAt)
           .setAssetsLargeText(`〈${currentDate}〉|〈🛸 ${Math.round(client.ws.ping)} m/s〉`) // status
           .setAssetsLargeImage(largeImages[currentLargeImageIndex]) // รูปใหญ่ไปใส่ข้างบน
-          .setAssetsSmallImage('https://cdn.discordapp.com/attachments/1199386824582373516/1211345413177745498/tenor.gif?ex=65eddc54&is=65db6754&hm=ba8a6e24009efbd52718cfae1408d77c5b469931d9cb856a53ea358429d013d9&') // รูปเล็ก
-          .setAssetsSmallText('✧ Busy')
-          .addButton('..?❤️', 'https://youtu.be/DG2QqcHwNdE?si=gmhUjuYRhkdObNhz')
-          .addButton('Itz4levy', 'https://guns.lol/4levy')
+          .setAssetsSmallText('୧₊˚✧・𝐁𝐮𝐬𝐲 ・꒱')
+          .addButton('୧₊˚💤・𝐈𝐭𝐳𝐥𝐞𝐯𝐲 ・꒱', 'https://guns.lol/4levy')
+          .addButton('୧₊˚💫・𝐰𝐡𝐚𝐭𝐞𝐯𝐞𝐫 ・꒱', 'https://discord.gg/aqt6thEVV7')
 
-        client.user.setPresence({ status: "idle" }); //dnd, online, idle, offline
+        client.user.setPresence({ status: "dnd" }); //dnd, online, idle, offline
         client.user.setActivity(r);
 
       // ปรับเปลียนไปรูปต่อไป
