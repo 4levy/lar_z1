@@ -31,11 +31,11 @@ client.on("ready", async () => {
 
 const r = new Discord.RichPresence()
           .setApplicationId('1155496899697180762')
-          .setType('STREAMING')
+          .setType('WATCHING')
           .setURL('https://www.twitch.tv/mastersamaz')
-          .setState('𝐓𝐫𝐮𝐬𝐭 𝐢𝐬 𝐬𝐡𝐢𝐭 𝐨𝐧 𝐢𝐧𝐭𝐞𝐫𝐧𝐞𝐭') // คำที่ขึ้น
+          .setState('Fucked') // คำที่ขึ้น
           .setName('𝐆𝐞𝐭 𝐫𝐞𝐚𝐥') // คำที่ขึ้น
-          .setDetails(` 〈⏰ ${currentTime}〉𝓧〈🌊 Itz ${client.user.username}〉`) // เวลาเเละชื่อของความเท่
+          .setDetails(` 〈⏰ ${currentTime}〉𝓧〈🌊 Itz${client.user.username}〉`) // เวลาเเละชื่อของความเท่
           .setStartTimestamp(startedAt)
           .setAssetsLargeText(`〈${currentDate}〉|〈🛸 ${Math.round(client.ws.ping)} m/s〉`) // status
           .setAssetsLargeImage(largeImages[currentLargeImageIndex]) // รูปใหญ่ไปใส่ข้างบน
