@@ -29,23 +29,23 @@ client.on("ready", async () => {
         const currentTime = getCurrentTime();
         const currentDate = getCurrentDate();
 
-const r = new Discord.RichPresence()
-          .setApplicationId('1155496899697180762')
-          .setType('WATCHING')
-          .setURL('https://www.twitch.tv/mastersamaz')
-          .setState('Fucked') // คำที่ขึ้น
-          .setName('𝐆𝐞𝐭 𝐫𝐞𝐚𝐥') // คำที่ขึ้น
-          .setDetails(` 〈⏰ ${currentTime}〉𝓧〈🌊 Itz${client.user.username}〉`) // เวลาเเละชื่อของความเท่
-          .setStartTimestamp(startedAt)
-          .setAssetsLargeText(`〈${currentDate}〉|〈🛸 ${Math.round(client.ws.ping)} m/s〉`) // status
-          .setAssetsLargeImage(largeImages[currentLargeImageIndex]) // รูปใหญ่ไปใส่ข้างบน
-          .setAssetsSmallText('୧₊˚✧・𝐁𝐮𝐬𝐲 ・꒱')
-          .addButton('💤・𝐈𝐭𝐳𝐥𝐞𝐯𝐲', 'https://guns.lol/4levy')
-          .addButton('💫・𝐰𝐡𝐚𝐭𝐞𝐯𝐞𝐫', 'https://discord.gg/aqt6thEVV7')
+        const r = new Discord.RichPresence()
+        .setApplicationId('1155496899697180762')
+        .setType('WATCHING')
+        .setURL('https://youtu.be/LzAlv-wnQJY?si=NI8ZtPikq9Hb7CR_')
+        .setState('Dms is closed') // คำที่ขึ้น
+        .setName('𝐆𝐞𝐭 𝐫𝐞𝐚𝐥') // คำที่ขึ้น
+        .setDetails(` 〈⏳${currentTime}〉 «» 〈💤 Itz${client.user.username}〉 `) // เวลาเเละชื่อของความเท่
+        .setStartTimestamp(startedAt)
+        .setAssetsLargeText(`<🗓️ ${currentDate}〉|〈🏓 ${Math.round(client.ws.ping)} m/s〉`) // status
+        .setAssetsLargeImage(largeImages[currentLargeImageIndex]) // รูปใหญ่ไปใส่ข้างบน
+        .setAssetsSmallImage('https://cdn.discordapp.com/attachments/889976848581287946/1213057913065840690/red-black-verified.gif?ex=65f41738&is=65e1a238&hm=be1d7b8811c326510230f61ae1cc1529a75d1c618ff28c1ad2e44cb72a2b9b93&') // รูปเล็ก
+        .setAssetsSmallText('✧ Busy')
+        .addButton('💫・whatever', 'https://discord.com/invite/aqt6thEVV7')
+        .addButton('💤・Itzlevy', 'https://guns.lol/4levy')
 
-        client.user.setPresence({ status: "dnd" }); //dnd, online, idle, offline
-        client.user.setActivity(r);
-
+      client.user.setPresence({ status: "dnd" }); //dnd, online, idle, offline
+      client.user.setActivity(r);
       // ปรับเปลียนไปรูปต่อไป
       currentLargeImageIndex = (currentLargeImageIndex + 1) % largeImages.length;
   }, 4000); // ปรับเวลา เปลียนรูปใหญ่
@@ -64,4 +64,5 @@ function getCurrentTime() {
     const c = { timeZone: "Asia/Bangkok", hour: "numeric", minute: "numeric", hour12: false };
     return a.toLocaleTimeString("th-TH", c);
 }
+
 client.login(process.env['token']);
